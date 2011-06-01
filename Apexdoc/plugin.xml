@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="org.eclipse.core.resources.IResource"
+            id="com.apex.doc.contribution1">
+         <menu
+               label="%menu.label.0"
+               path="additions"
+               id="com.salesforce.ide.ui.menu.tools">
+            <separator name="group2" />
+         </menu>
+         <action
+               label="%action.label.0"
+               class="com.apex.doc.popup.actions.AppStart"
+               menubarPath="com.salesforce.ide.ui.menu.tools/group2"
+               enablesFor="1"
+               id="com.apex.doc.newAction">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>
