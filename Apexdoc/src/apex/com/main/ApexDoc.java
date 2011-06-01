@@ -147,24 +147,14 @@ public class ApexDoc implements IRunnableWithProgress {
 		    ArrayList<MethodModel> methods = new ArrayList<MethodModel>();
 		    ArrayList<PropertyModel> properties = new ArrayList<PropertyModel>();
 		    
-		    //DH: Consider using java.io.StreamTokenizer to read the file a token at a time?
+		    // DH: Consider using java.io.StreamTokenizer to read the file a token at a time?
 		    //
-		    // desired features:
-		    // 		scope(s) to document: global, public, both
-		    //		include all: whether to include all classes, methods, properties, or only those with preceding comment block.
-		    //		nested classes ignored, and its properties and methods get attributed to its outer class.
-		    //		expand all button on html page
-		    //		nicer visuals on html page (more condensed, less loud)
-		    //		comments on properties
-		    //
-		    //
-		    //
-		    // new strategy ideas:
-		    // any line with " class " is a class definition
-		    // any line with scope (global, public, private) is a class, method, or property definition.
-		    // you can detect a method vs. a property by the presence of ( )'s
-		    // you can also detect properties by get; or set;, though they may not be on the first line.
-		    // in apex, methods that start with get and take no params, or set with 1 param, are actually properties.
+		    // new strategy notes:
+		    // 		any line with " class " is a class definition
+		    // 		any line with scope (global, public, private) is a class, method, or property definition.
+		    // 		you can detect a method vs. a property by the presence of ( )'s
+		    // 		you can also detect properties by get; or set;, though they may not be on the first line.
+		    // 		in apex, methods that start with get and take no params, or set with 1 param, are actually properties.
 		    //
 
 	    

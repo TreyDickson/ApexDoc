@@ -72,7 +72,7 @@ public class ApexDocForm extends ApplicationWindow {
     
     CLabel l = new CLabel(form.getBody(), SWT.LEFT);
     l.setFont(new Font(null,"",12, 1));
-    l.setText("Force.com Apex Documentation Tool");
+    l.setText("Force.com Apex Documentation Tool\n\n version 1.1");
     l.setImage(lookImage);
     GridData gd1 = new GridData(GridData.HORIZONTAL_ALIGN_FILL);
     gd1.horizontalSpan = 3;
@@ -148,21 +148,30 @@ public class ApexDocForm extends ApplicationWindow {
     final Button cbxPrivate = toolkit.createButton(form.getBody(), "private", SWT.CHECK);
     cbxPrivate.setBackground(bg);
     cbxPrivate.setLayoutData(gd);
-
+  
     Button buttonClose = toolkit.createButton(form.getBody(), " Close ", SWT.PUSH);
     Button buttonGenerate = toolkit.createButton(form.getBody(), " Generate ", SWT.PUSH);
     buttonClose.setLayoutData(new GridData(GridData.HORIZONTAL_ALIGN_BEGINNING));
     buttonGenerate.setLayoutData(new GridData(GridData.HORIZONTAL_ALIGN_BEGINNING));
     //label.setLayoutData(new GridData(GridData.HORIZONTAL_ALIGN_FILL));
     
+    //create some space (there must be a better way!)
+    label = toolkit.createLabel(form.getBody(), "", SWT.NULL);
+    label = toolkit.createLabel(form.getBody(), "", SWT.NULL);
+    label = toolkit.createLabel(form.getBody(), "", SWT.NULL);
+    
     FormText formText = toolkit.createFormText(form.getBody(), true);
     gd = new GridData(GridData.HORIZONTAL_ALIGN_FILL);
     gd.horizontalSpan = 3;
     formText.setLayoutData(gd);
-    String text = "For more info about ApexDoc, visit the Google code project.... ";
+    String text = "For more info about ApexDoc, visit the Google code project at http://code.google.com/p/apexdoc/ ";
     formText.setText(text, false, true);
     formText.setBackground(bg);
     
+    //create some space (there must be a better way!)
+    label = toolkit.createLabel(form.getBody(), "", SWT.NULL);
+    label = toolkit.createLabel(form.getBody(), "", SWT.NULL);
+    label = toolkit.createLabel(form.getBody(), "", SWT.NULL);
     
     buttonTD.addSelectionListener(new SelectionListener() {
 

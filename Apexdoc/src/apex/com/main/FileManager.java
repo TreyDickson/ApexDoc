@@ -115,7 +115,9 @@ public class FileManager {
 			if(cModel.getNameLine() != null && cModel.getNameLine().length() > 0){
 				fileName = cModel.getClassName();
 				contents += "<td width='80%'>";
-				contents += "<h2 class='section-title'>" + cModel.getClassName() + "</h2>" +
+				contents += "<h2 class='section-title'>" + cModel.getClassName() + 
+							 	"<span style='float:right;margin-top:-5px;'><input type='button' value='+/- all' onclick='ToggleAll();' /></span>" +
+							"</h2>" +
 							"<table class='details' rules='all' border='1' cellpadding='6'>" +
 								"<tr><th>Author</th><td>" + cModel.getAuthor() + "</td></tr>" +
 								"<tr><th>Date</th><td>" + cModel.getDate() + "</td></tr>" +
@@ -136,7 +138,8 @@ public class FileManager {
 				
 				contents += "</table></div>" 
 						 + "<h2 class='section-title'>Methods</h2>";
-				
+
+			
 				//System.out.println("Methods::::::::::::::::::::::::");
 				for (MethodModel method : cModel.getMethods()) {
 					contents += "<h2 class='trigger'><input type='button' value='+' style='width:24px' />&nbsp;&nbsp;<a href='#'>" + method.getMethodName() + "</a></h2>" +

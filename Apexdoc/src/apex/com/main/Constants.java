@@ -10,7 +10,7 @@ public class Constants {
 											"$('.toggle_container').hide();\n" + 
 											
 											"$('h2.trigger').click(function(){\n" +
-												"$(this).toggleClass('active').next().slideToggle('slow');" +
+												"$(this).toggleClass('active').next().slideToggle('fast');" +
 												"ToggleBtnLabel(this.firstChild);" +
 												"return false; " +
 											"});" +
@@ -18,26 +18,47 @@ public class Constants {
 
 											"function gotomenu(url){" +
 												"document.location.href = url;" +
-											"}" +
+											"}\n" +
 											
 											"function ToggleBtnLabel(ctrl){" +
 												"ctrl.value = (ctrl.value=='+' ? '-' : '+');" +
-											"}" +
-											"</script>" +
+											"}\n" +
 											
-											"</head>" +
-											"<body>" +
-											"<div class='topsection'>" +
-											"<table>" +
-											"<tr><td>" +
-											"<img src='apex_doc_logo.png' style='border:1px solid #000;'/>" +
-											"</td>" +
-											"<td>"; 
+											"function IsExpanded(ctrl) {" +
+												"return (ctrl.value == '-');" +
+											"}\n" +
+												
+											"function ToggleAll() {" +
+												"var cExpanded = 0;" +
+												"$('h2.trigger').each(function(){" +
+													"if (!IsExpanded(this.firstChild)) {" +
+														"$(this).toggleClass('active').next().slideToggle('fast');" +
+														"ToggleBtnLabel(this.firstChild);" +
+														"cExpanded++;" +
+													"}" +
+												"});" +
+												"if (cExpanded == 0) {" +
+													"$('h2.trigger').each(function(){" +
+														"$(this).toggleClass('active').next().slideToggle('fast');" +
+														"ToggleBtnLabel(this.firstChild);" +
+													"});" +
+												"}" +
+											"}\n" +  
+											
+										"</script>" +
+										"</head>" +
+										"<body>" +
+										"<div class='topsection'>" +
+										"<table>" +
+										"<tr><td>" +
+										"<img src='apex_doc_logo.png' style='border:1px solid #000;'/>" +
+										"</td>" +
+										"<td>"; 
 	public static final String HEADER_CLOSE = 										
-											"</td>" +
-											"</tr>" +
-											"</table>" +
-											"</div>";
+										"</td>" +
+										"</tr>" +
+										"</table>" +
+										"</div>";
 	
 	public static final String FOOTER = "</div></div></td></tr></table><hr/><center style='font-size:10px;'><a href='#'>Powered By : ApexDoc </a><br/> <br/>" + 
 										"Contact: aslam.bari@gmail.com</center></body></html>";
