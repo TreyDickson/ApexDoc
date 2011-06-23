@@ -60,14 +60,13 @@ public class Constants {
 										"</table>" +
 										"</div>";
 	
-	public static final String FOOTER = "</div></div></td></tr></table><hr/><center style='font-size:10px;'><a href='#'>Powered By : ApexDoc </a><br/> <br/>" + 
-										"Contact: aslam.bari@gmail.com</center></body></html>";
+	public static final String FOOTER = "</div></div></td></tr></table><hr/><center style='font-size:10px;'><a href='http://code.google.com/p/apexdoc/'>Powered By ApexDoc </a>" + 
+										"</center></body></html>";
 	public static final String ROOT_DIRECOTRY = "ApexDocumentation";
 	public static final String DEFAULT_HOME_CONTENTS = "<h1>Project Home</h2>";
 	public static final String PROJECT_DETAIL = "<h2 style='margin:0px;'>Project Demo</h2>" +
-												"Aslam Bari<br/>" + 
-												"aslam.bari@gmail.com<br/>" +
-												"91-9251425422";
+												"Check out the Google code project at:<br/>" + 
+												"<a href='http://code.google.com/p/apexdoc/'>http://code.google.com/p/apexdoc/</a><br/>";
 	public static String getHeader(String projectDetail){
 		String header;
 		if(projectDetail != null && projectDetail.trim().length() > 0){

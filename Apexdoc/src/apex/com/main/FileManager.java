@@ -124,7 +124,7 @@ public class FileManager {
 								"<tr><th>Description</th><td>" + cModel.getDescription() + "</td></tr>" +
 							"</table>";
 				
-				contents += "<p/>" +
+				contents += "<p></p>" +
 							"<h2 class='trigger'><input type='button' value='+' style='width:24px' />&nbsp;&nbsp;<a href='#'>Properties</a></h2>" + 
 							"<div class='toggle_container'> " +
 								"<table class='properties' border='1' rules='all' cellpadding='6'> ";
@@ -132,7 +132,7 @@ public class FileManager {
 				//System.out.println("Properties::::::::::::::::::::::::");
 				for (PropertyModel prop : cModel.getProperties()) {
 					contents += "<tr><td class='clsPropertyName'>" + prop.getPropertyName() + "</td>";
-					contents += "<td><div class='clsPropertyDeclaration'>" + prop.getNameLine() + "</div><p style='font-size:.4em;' />";
+					contents += "<td><div class='clsPropertyDeclaration'>" + prop.getNameLine() + "</div>";
 					contents += "<div class='clsPropertyDescription'>" + prop.getDescription() + "</div></tr>";
 				}
 				

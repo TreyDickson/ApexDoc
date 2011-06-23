@@ -72,7 +72,7 @@ public class ApexDocForm extends ApplicationWindow {
     
     CLabel l = new CLabel(form.getBody(), SWT.LEFT);
     l.setFont(new Font(null,"",12, 1));
-    l.setText("Force.com Apex Documentation Tool\n\n version 1.1");
+    l.setText("Force.com Apex Documentation Tool\n\n version 1.1.1");
     l.setImage(lookImage);
     GridData gd1 = new GridData(GridData.HORIZONTAL_ALIGN_FILL);
     gd1.horizontalSpan = 3;
